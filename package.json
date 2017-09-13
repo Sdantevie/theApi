@@ -1,0 +1,18 @@
+{
+  "name": "myblogapi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "an Api for sdaniel.com. Built for the purpose of experimenting things",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Steven Daniel <dstevie9292@gmail.com, @_dEeMogul>",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.12.0"
+  },
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
