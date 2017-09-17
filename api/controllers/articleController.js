@@ -11,6 +11,13 @@ exports.listAllArticles = (req, res) => {
 
 exports.listOneArticle = (req, res) => {
     Article.findById(req.params.articleId, (err, article) => {
-        err ? res.send(err) : res.json(articles);
+        err ? res.send(err) : res.json(article);
     });
 };
+
+exports.addAnArticle = (req, res) => {
+    let newArticle = new Article(req.body);
+    newArticle.save((err, data) => {
+        err ? res.send(err) : res.json(data);
+    });
+}

@@ -9,7 +9,10 @@ var articleSchema = new schema({
         default: Date.now
     },
     body: String,
-    modified: Date,
+    modified: {
+        type: Date, 
+        default: Date.now
+    }
 });
 
 var Article = mongoose.model('Article', articleSchema);
