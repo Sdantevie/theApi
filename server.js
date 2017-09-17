@@ -1,10 +1,19 @@
 'use strict';
+// initaizing Dependencies
+const express = require('express'),
+    app = express(),
+    port = process.env.PORT || 3000,
+    mongoose = require('mongoose'),
+    //Registering the Model
+    Article = require('./api/model/articleModel'),
+    routes = require('./api/routes/articleRouting');
 
-var express = require('express');
-var app = express();
+// Setting Up MongoDB
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost:27017/sdaniel', {useMongoClient: true});
 
-app.get('/', (req, res) => {
-    res.end('<h2>They don\'t want me to build an API. <br>So I built Myself an Api</h2><br><h1>Be Ready!!!</h1>');
-}).listen(3000);
+// Set Up routing
+routes(app);
 
+app.listen(port);
 console.log('the Api is running on Port 3000');
