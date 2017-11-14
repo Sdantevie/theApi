@@ -1,7 +1,7 @@
 'use strict';
 
 const mongoose = require('mongoose'),
-      Article = mongoose.model('Article');
+    Article = require('../model/articleModel');
 
 exports.listAllArticles = (req, res) => {
     Article.find({}, (err, articles) => {

@@ -1,18 +1,18 @@
-var mongoose = require('mongoose'),
+const mongoose = require('mongoose'),
     schema = mongoose.Schema;
 
-var articleSchema = new schema({
+const articleSchema = new schema({
     title: String,
     author: String,
     created: {
-        type: Date, 
+        type: Date,
         default: Date.now
     },
     body: String,
     modified: {
-        type: Date, 
+        type: Date,
         default: Date.now
     }
 });
 
-var Article = mongoose.model('Article', articleSchema);
+module.exports = mongoose.model('Article', articleSchema);
