@@ -1,12 +1,13 @@
 'use strict';
 
+process.env.NODE_ENV = 'test';
 const mocha = require('mocha'),
     mongoose = require('mongoose'),
     User = require('../api/model/userModel'),
     server = require('../server'),
     chai = require('chai'),
     chaiHttp = require('chai-http'),
-    should = chai.should();
+    expect = chai.expect;
 
 chai.use(chaiHttp);
 
@@ -29,7 +30,7 @@ describe('User', () => {
                 .post('/users')
                 .send(user)
                 .end((err, res) => {
-                    res.should.have.status(200);
+                    expect(res).to.have.status(200);
                 });
             done();
         });

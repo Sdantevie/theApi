@@ -1,4 +1,4 @@
 {
     // "DBHost": "mongodb://localhost:27017/sdaniel_test", //local
-    "DBHost": "mongodb://<steve>:<skoobybi0la>@ds111066.mlab.com:11066/testingblogapi" // hosted
+    "DBHost": "mongodb://daniel:d4niel@ds111066.mlab.com:11066/testingblogapi" // hosted
 }
