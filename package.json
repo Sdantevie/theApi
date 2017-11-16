@@ -21,7 +21,7 @@
         "config": "^1.28.1",
         "express": "^4.15.4",
         "mocha": "^4.0.1",
-        "mongoose": "^4.11.11",
+        "mongoose": "^4.13.3",
         "mongoose-type-email": "^1.0.5"
     }
 }
