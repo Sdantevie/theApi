@@ -7,6 +7,7 @@ const mocha = require('mocha'),
     server = require('../server'),
     chai = require('chai'),
     chaiHttp = require('chai-http'),
+    should = chai.should(),
     expect = chai.expect;
 
 chai.use(chaiHttp);
@@ -31,8 +32,10 @@ describe('User', () => {
                 .send(user)
                 .end((err, res) => {
                     expect(res).to.have.status(200);
+                    expect(res.body).to.be.a('object');
+                    expect(res.body).to.have.property('name').eql('Steve');
+                    done();
                 });
-            done();
         });
     });
 });
