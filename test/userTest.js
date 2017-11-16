@@ -1,3 +1,5 @@
+'use strict';
+
 const mocha = require('mocha'),
     mongoose = require('mongoose'),
     User = require('../api/model/userModel'),
